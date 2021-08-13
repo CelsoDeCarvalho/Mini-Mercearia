@@ -7,15 +7,18 @@ public class Mercearia implements Serializable{
     
     private String nome;
     private String endereco;
+    private int id;
     private List<Usuario> usuarios;
     private List<Categoria> categorias;
 
-    public Mercearia(String nome, String endereco, List<Usuario> usuarios) {
+    public Mercearia(String nome, String endereco, int id, List<Usuario> usuarios, List<Categoria> categorias) {
         this.nome = nome;
         this.endereco = endereco;
+        this.id = id;
         this.usuarios = usuarios;
-        this.categorias = null;
+        this.categorias = categorias;
     }
+
 
     public String getNome() {
         return nome;
@@ -48,6 +51,16 @@ public class Mercearia implements Serializable{
     public void setCategorias(List<Categoria> categorias) {
         this.categorias = categorias;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    
 
     @Override
     public String toString() {

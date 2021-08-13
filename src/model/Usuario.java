@@ -5,17 +5,19 @@ import java.io.Serializable;
 public class Usuario extends Pessoa implements Serializable{
     
     private String nome_usuario;
+    private int id_mercearia;
     private String senha;
-    private boolean logado;
+    private String tarefa;
 
-    public Usuario(String nome_usuario, String senha, boolean logado, String nome, String apelido) {
+    public Usuario(String nome_usuario, int id_mercearia, String senha, String tarefa, String nome, String apelido) {
         super(nome, apelido);
         this.nome_usuario = nome_usuario;
+        this.id_mercearia = id_mercearia;
         this.senha = senha;
-        this.logado = logado;
+        this.tarefa = tarefa;
     }
-    
-   
+
+
     public String getNome_usuario() {
         return nome_usuario;
     }
@@ -32,20 +34,21 @@ public class Usuario extends Pessoa implements Serializable{
         this.senha = senha;
     }
 
-    public boolean isLogado() {
-        return logado;
+    public String getTarefa() {
+        return tarefa;
     }
 
-    public void setLogado(boolean logado) {
-        this.logado = logado;
+    public void setTarefa(String tarefa) {
+        this.tarefa = tarefa;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario{" + "nome=" + getNome() + ", apelido=" + getApelido() + ", nome_usuario=" + nome_usuario + ", senha=" + senha + ", logado=" + logado + '}';
+    public int getId_mercearia() {
+        return id_mercearia;
     }
-    
-    
-    
+
+    public void setId_mercearia(int id_mercearia) {
+        this.id_mercearia = id_mercearia;
+    }
+
     
 }
